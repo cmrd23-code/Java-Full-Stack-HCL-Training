@@ -35,7 +35,7 @@ class Comp implements Comparator<Student>{
 
     @Override
     public int compare(Student o1, Student o2) {
-        return Integer.compare(o1.age,o2.age);
+        return Integer.compare(o1.rollno,o2.rollno);
     }
 }
 public class Task1 {
@@ -45,10 +45,11 @@ public class Task1 {
        ls.add(new Student("raju",2,18,70));
        ls.add(new Student("vineet",3,25,80));
         System.out.println(ls);
-        //Collections.sort(ls);
-        //Collections.sort(ls,new Comp());
+        Collections.sort(ls);
+        System.out.println(ls);
+        Collections.sort(ls,new Comp());
 //lambdas can be also used for quick sort logic
-        Collections.sort(ls,(a,b)->Integer.compare(a.age,b.age));
+        Collections.sort(ls, (a,b)->Double.compare(a.marks,b.marks));
         System.out.println(ls);
     }
 }

@@ -97,6 +97,7 @@ public class EmployeAnalytics {
                 .map(Map.Entry::getKey)
                 .orElse("none");
         System.out.println("Most common skill: " + mostCommonSkill);
+        System.out.println("");
 
         }
     }
